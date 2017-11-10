@@ -11,6 +11,10 @@ Ext.define('Opportunity.Application', {
     stores: [
         // TODO: add global / shared stores here
     ],
+
+    controllers: [
+        'DataLoader'
+    ],
     
     launch: function () {
         // TODO - Launch the application

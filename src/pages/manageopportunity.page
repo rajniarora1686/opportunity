@@ -1,4 +1,9 @@
 <apex:page sidebar="false" showHeader="false" standardStylesheets="false" docType="html-5.0" controller="ManageOpportunityController">
+    <script>
+        window.$Params = window.$Params || {};
+        $Params.AllOpportunities = '{!JSENCODE(AllOpportunities)}';
+    </script>
+    
     <c:sfExtjs applicationName="Opportunity" staticResource="{!$Resource.opportunity_new}" 
         developmentPrefix="{!$Setup.ClientDeveloperSetting__c.LocalHostPath__c}" 
         frameworkPath="../../../ext" baseCSSPrefix="x-">      
