@@ -9,7 +9,7 @@ Ext.define('Opportunity.Application', {
     name: 'Opportunity',
 
     stores: [
-        // TODO: add global / shared stores here
+        'Opportunities'
     ],
 
     controllers: [
