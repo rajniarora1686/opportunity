@@ -8,5 +8,12 @@ Ext.define('Opportunity.controller.DataLoader', {
         var store = Ext.create('Opportunity.store.Opportunities', {
             data: allOpportunities
         });
+
+        var sorters1 = [  {
+            property: 'opportunityName',
+            direction: 'ASC'
+            }];
+
+        store.sort(sorters1);
     }
 });
