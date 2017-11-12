@@ -8,7 +8,19 @@ Ext.define('Opportunity.view.westPanel.WestPanel', {
         'Opportunity.view.westPanel.Opportunities'
     ],
 
+    tbar: [{
+        text: 'New Opportunity',
+        handler: 'onClickNewButton'
+    }],
+
     items: [{
+            xtype: 'textfield',
+            emptyText: 'Search Opportunity',
+            padding: 10,
+            listeners: {
+                change: 'onChangeText'
+            }
+        }, {
             xtype: 'oppsList',
             reference: 'oppsList'
         }
