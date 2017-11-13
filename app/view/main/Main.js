@@ -9,7 +9,8 @@ Ext.define('Opportunity.view.main.Main', {
     extend: 'Ext.container.Container',
     requires: [
         'Opportunity.view.main.MainController',
-        'Opportunity.view.main.MainModel'
+        'Opportunity.view.main.MainModel',
+        'Opportunity.view.westPanel.WestPanel'
     ],
 
     xtype: 'app-main',
@@ -23,19 +24,12 @@ Ext.define('Opportunity.view.main.Main', {
         type: 'border'
     },
 
+    title: 'Manage Opportunities',
+
     items: [{
-        xtype: 'panel',
-        bind: {
-            title: '{name}'
-        },
+        xtype: 'westPanel',
         region: 'west',
-        html: '<ul><li>This area is commonly used for navigation, for example, using a "tree" component.</li></ul>',
-        width: 250,
-        split: true,
-        tbar: [{
-            text: 'Button',
-            handler: 'onClickButton'
-        }]
+        flex:0.4  
     },{
         region: 'center',
         xtype: 'tabpanel',
