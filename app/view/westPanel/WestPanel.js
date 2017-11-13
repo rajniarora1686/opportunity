@@ -8,19 +8,22 @@ Ext.define('Opportunity.view.westPanel.WestPanel', {
         'Opportunity.view.westPanel.Opportunities'
     ],
 
-    tbar: [{
-        text: 'New Opportunity',
-        handler: 'onClickNewButton'
-    }],
+    tbar: {layout: { type: 'vbox', align: 'left'},
+        items: [{
+                text: 'New Opportunity',
+                handler: 'onClickNewButton'
+            },{
+                xtype: 'textfield',
+                emptyText: 'Search Opportunity',
+                padding: 10,
+                listeners: {
+                    change: 'onChangeText'
+                }
+            }]
+        },
 
+    autoScroll: true,
     items: [{
-            xtype: 'textfield',
-            emptyText: 'Search Opportunity',
-            padding: 10,
-            listeners: {
-                change: 'onChangeText'
-            }
-        }, {
             xtype: 'oppsList',
             reference: 'oppsList'
         }
